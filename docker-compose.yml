@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  mongo:
+    image: mongo
+    restart: always
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+
+  backend:
+    build: ./backend
+    restart: always
+    ports:
+      - "4000:4000"
+    depends_on:
+      - "mongo"
+      - "postgres"
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - DATABASE
+      - AUTHSECRET
+
+  frontend:
+    build: ./frontend
+    restart: always
+    volumes:
+      - /pgdata:/var/lib/postgresql/data
+    ports:
+      - "8081:80"
+    links:
+      - backend

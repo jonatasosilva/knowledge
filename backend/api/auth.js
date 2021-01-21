@@ -1,4 +1,5 @@
-const { authSecret } = require('../.env')
+require('dotenv').config()
+const authSecret = process.env.AUTHSECRET
 const jwt = require('jwt-simple')
 const bcrypt = require('bcrypt-nodejs')
 
