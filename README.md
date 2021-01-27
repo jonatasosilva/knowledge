@@ -1,42 +1,28 @@
 # Knowledge
+![cover](https://raw.githubusercontent.com/jonatasosilva/knowledge/main/assets/cover.gif)
 
 ## Sobre o projeto
 [https://knowledge.jonatasosilva.dev/](https://knowledge.jonatasosilva.dev/)
 
 ## Como executar o projeto
 ### Pré-requisitos
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: Git e Node.js.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: Docker, Docker Compose e Git.
 
 ```bash
 # Clone este repositório
 $ git clone https://github.com/jonatasosilva/knowledge
 
-# Acesse a pasta do projeto no terminal/cmd
+# Acesse a pasta do projeto no terminal
 $ cd knowledge
-```
 
-### Back-end
-```bash
-# Vá para a pasta backend
-$ cd backend
+# Duplique o arquivo .env
+$ cp .env.example .env
 
-# Instale as dependências
-$ npm install
+# Altere as variáveis de ambiente
+$ nano .env
 
-# Execute a aplicação
-$ npm start
-```
-
-### Front-end
-```bash
-# Vá para a pasta frontend
-$ cd frontend
-
-# Instale as dependências
-$ npm install
-
-# Execute a aplicação
-$ npm run serve
+# Faça o build do container
+$ docker-compose up -d
 ```
 
 ## Tecnologias
