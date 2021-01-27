@@ -2,6 +2,8 @@
 ![cover](https://raw.githubusercontent.com/jonatasosilva/knowledge/main/assets/cover.gif)
 
 ## Sobre o projeto
+Sistema de publicação de artigos. O back-end foi construído com Express e Node.js, também foi utilizado o módulo Passport.js para autenticação. Enquanto Vue e BootstrapVue foram utilizados no front-end.
+
 [https://knowledge.jonatasosilva.dev/](https://knowledge.jonatasosilva.dev/)
 
 ## Como executar o projeto
